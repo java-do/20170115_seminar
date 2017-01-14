@@ -2,7 +2,7 @@
 
 JAX-RS（Jersy）の初心者向けハンズオンの第2部です。
 
-- 1.https://github.com/java-do/20170115_seminarにブラウザでアクセスしよう
+- 1.https://github.com/java-do/20170115_seminar にブラウザでアクセスしよう
 - [2. 本ハンズオン用Mavenプロジェクトをダウンロードしよう](./doc/02.md)
 - [3. ダウンロードしたMavenプロジェクトをIDEで読み込もう](./doc/03.md)
 - [4. 起動の確認をしよう](./doc/04.md)
