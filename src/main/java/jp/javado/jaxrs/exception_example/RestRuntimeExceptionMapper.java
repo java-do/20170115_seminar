@@ -1,7 +1,7 @@
-package jp.javado.jaxrs.exception;
+package jp.javado.jaxrs.exception_example;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import jp.javado.jaxrs.exception.ErrorCase;
+import jp.javado.jaxrs.exception.RestRuntimeException;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;

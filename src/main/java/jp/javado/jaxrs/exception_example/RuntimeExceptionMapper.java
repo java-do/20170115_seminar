@@ -1,4 +1,4 @@
-package jp.javado.jaxrs.exception;
+package jp.javado.jaxrs.exception_example;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;

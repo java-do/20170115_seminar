@@ -1,4 +1,4 @@
-package jp.javado.jaxrs.resourceexample;
+package jp.javado.jaxrs.resource_example;
 
 import jp.javado.jaxrs.exception.RestException;
 import jp.javado.jaxrs.exception.RestRuntimeException;
