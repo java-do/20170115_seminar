@@ -38,6 +38,7 @@ public class ProductDatabase {
 	}
 	*/
 
+	// 本来は上をやりたいが今回は何もしない処理に変更する
 	public static void init() {
 		products = new ArrayList<>();
 		products.add(new Product(1, "ジンギスカン", 4500));

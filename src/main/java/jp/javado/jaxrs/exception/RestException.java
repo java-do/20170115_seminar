@@ -7,7 +7,10 @@ public class RestException extends Exception {
 
     private ErrorCase errorCase;
 
-    public RestException(ErrorCase errorCase) { this.errorCase = errorCase; }
+    public RestException(ErrorCase errorCase) {
+        super(errorCase.getErrorCaseMessage());
+        this.errorCase = errorCase;
+    }
 
     public RestException(String message) {
         super(message);

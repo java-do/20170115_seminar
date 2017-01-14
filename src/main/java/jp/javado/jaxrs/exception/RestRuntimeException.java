@@ -7,7 +7,10 @@ public class RestRuntimeException extends RuntimeException {
 
     private ErrorCase errorCase;
 
-    public RestRuntimeException(ErrorCase errorCase) { this.errorCase = errorCase; }
+    public RestRuntimeException(ErrorCase errorCase) {
+        super(errorCase.getErrorCaseMessage());
+        this.errorCase = errorCase;
+    }
 
     public RestRuntimeException(ErrorCase errorCase, String message, Throwable throwable) {
         super(message, throwable);

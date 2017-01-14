@@ -12,6 +12,7 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
 
     @Override
     public Response toResponse(RuntimeException e) {
+        System.out.println("RuntimeExceptionMapper execute");
         e.printStackTrace();
         return Response.status(Response.Status.SERVICE_UNAVAILABLE).build();
     }

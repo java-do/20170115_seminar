@@ -2,7 +2,10 @@ package jp.javado.jaxrs.exception;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jp.javado.jaxrs.pojo.ErrorMessage;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
@@ -15,23 +18,15 @@ import javax.ws.rs.ext.Provider;
 public class RestExceptionMapper implements ExceptionMapper<RestException> {
 
     @Override
+    @Produces(MediaType.APPLICATION_JSON)
     public Response toResponse(RestException e) {
 
         ErrorCase errorCase = e.getErrorCaseMessage();
 
-        String message = null;
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            message = mapper.writeValueAsString(errorCase.getErrorMessage());
-        } catch (JsonProcessingException ee) {
-            ee.printStackTrace();
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-        } catch (RuntimeException ee) {
-            ee.printStackTrace();
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-        }
+        ErrorMessage message   = errorCase.getErrorMessage();
+        Response.Status status = errorCase.getStatus();
 
-        return Response.status(Response.Status.BAD_REQUEST).entity(message).type(MediaType.APPLICATION_JSON_TYPE).build();
+        return Response.status(status).entity(message).type(MediaType.APPLICATION_JSON_TYPE).build();
     }
 
 }
