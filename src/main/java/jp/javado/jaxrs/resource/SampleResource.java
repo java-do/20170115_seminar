@@ -12,8 +12,8 @@ public class SampleResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response get() {
-		System.out.println("okokok");
-		return Response.status(Response.Status.OK).entity("say").build();
+		System.out.println("Rest request OK!");
+		return Response.status(Response.Status.OK).entity("Rest request OK!").build();
 	}
 
 

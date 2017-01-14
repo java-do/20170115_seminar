@@ -1,9 +1,9 @@
 package jp.javado.jaxrs.filter;
 
-import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.core.Context;
+//import javax.ws.rs.core.Context;
 import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
@@ -16,8 +16,8 @@ public class RestRequestFilter implements ContainerRequestFilter {
 
     private static final String LIMITED_PATH = "product/limited";
 
-    @Context
-    private HttpServletRequest request;  // injection
+//    @Context
+//    private HttpServletRequest request;  // injection
 
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
@@ -25,10 +25,11 @@ public class RestRequestFilter implements ContainerRequestFilter {
         System.out.println("[filter] path: " + containerRequestContext.getUriInfo().getPath()); // Resourceクラスで定義したパス
 
         // ここのResourceで定義せずにここでパス指定でIPADDRESS制限ができる
-        System.out.println("[filter] ipaddress: " +request.getRemoteAddr()); //IPv6
+/*        System.out.println("[filter] ipaddress: " +request.getRemoteAddr()); //IPv6
         if ( LIMITED_PATH.equals(containerRequestContext.getUriInfo().getPath()) ) {
             String ipaddress = request.getRemoteAddr();
             System.out.println("[filter] ipaddress: " + ipaddress);
         }
+*/
     }
 }

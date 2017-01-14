@@ -5,14 +5,14 @@ import jp.javado.jaxrs.exception.RestRuntimeException;
 import jp.javado.jaxrs.exception.ErrorCase;
 import jp.javado.jaxrs.pojo.Product;
 import jp.javado.db.ProductDatabase;
-import jp.javado.jaxrs.pojo.ProductList;
+//import jp.javado.jaxrs.pojo.ProductList;
 import org.glassfish.jersey.media.multipart.FormDataBodyPart;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 
-import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
+//import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.List;
+//import java.util.List;
 
 @Path("/product")
 public class ExampleProductResource {
@@ -52,6 +52,7 @@ public class ExampleProductResource {
     }
 
     // http://xxx.xxx/rest/api/product/limited
+/*
     @GET
     @Path("/limited")
     @Produces(MediaType.APPLICATION_JSON)
@@ -66,7 +67,8 @@ public class ExampleProductResource {
 
         return new Product(9999, "北海道限定 焼きそば弁当", 120);
     }
-
+*/
+/*
     // 推奨しない
     // http://xxx.xxx/rest/api/product/list
     @GET
@@ -87,7 +89,7 @@ public class ExampleProductResource {
         productList1.setProductList(productList);
         return productList1;
     }
-
+*/
     // http://xxx.xxx/rest/api/product/limited
     @POST
     @Path("/fileupload/multipart")
