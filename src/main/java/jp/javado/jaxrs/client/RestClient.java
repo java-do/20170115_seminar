@@ -6,6 +6,7 @@ import jp.javado.jaxrs.pojo.ProductList;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.Response;
+import java.io.FileOutputStream;
 import java.util.List;
 
 /**
@@ -49,4 +50,5 @@ public class RestClient {
         System.out.println(productList);
         return productList;
     }
+
 }
