@@ -8,6 +8,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 public class RestApplication extends ResourceConfig {
     public RestApplication() {
         System.out.println("resource config load.");
+        //packages("jp.javado.jaxrs.resourceexample;jp.javado.jaxrs.exception;jp.javado.jaxrs.filter");
         packages("jp.javado.jaxrs.resource;jp.javado.jaxrs.exception;jp.javado.jaxrs.filter");
         register(org.glassfish.jersey.jackson.JacksonFeature.class);
         register(com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider.class);
