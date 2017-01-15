@@ -21,8 +21,8 @@ public class RestRequestFilter implements ContainerRequestFilter {
 
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        System.out.println("[filter] absolutepath: " + containerRequestContext.getUriInfo().getAbsolutePath()); // 絶対パス
-        System.out.println("[filter] path: " + containerRequestContext.getUriInfo().getPath()); // Resourceクラスで定義したパス
+        System.out.println("[" + containerRequestContext.getUriInfo().getAbsolutePath() + "]がリクエストされました。"); // 絶対パス
+        //System.out.println("[filter] path: " + containerRequestContext.getUriInfo().getPath()); // Resourceクラスで定義したパス
 
         // ここのResourceで定義せずにここでパス指定でIPADDRESS制限ができる
 /*        System.out.println("[filter] ipaddress: " +request.getRemoteAddr()); //IPv6
